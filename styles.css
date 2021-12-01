@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #181818;
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body, html {
+    /* temp */
+    /* background: var(--primary-color); */
+
+    background: white;
+}
+body {
+    width: 100vw;
+    position: relative;
+}
+nav {
+    border: 1px solid red;
+    padding: .5em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.nav-item {
+    height: 2em;
+    width: 2em;
+    background: red;
+    border-radius: 50%;
+}
+#yt-btn {
+    height: 2em;
+    width: 4em;
+    background: red;
+}
+#search {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#search input {
+    width: 50%;
+}
+/* main layout styles */
+main {
+    margin: 5% auto;
+    display: flex;
+    border: 1px solid pink;
+    width: 80%;
+    height: 100%;
+}
+#column-main {
+    width: 70%;
+    height: 100%;
+}
+aside {
+    border: 1px solid pink;
+    width: 30%;
+    height: 100%;
+}
+/* player styles */
+#player iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+/* player meta */
+#player-meta {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+#player-meta-items {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.player-meta-stack {
+    display: flex;
+}
+.player-meta-btn {
+    height: 1em;
+    width: 1em;
+    background: red;
+    border-radius: 50%;
+}
+#player-like {
+    margin-left: auto;
+}
+/* player desc */
+#player-description {
+    margin: 1em 0;
+    display: flex; 
+    gap: 1em;
+}
+#description-stack {
+    width: 75%;
+}
+#player-avi {
+    height: 2em;
+    width: 2em;
+    background: red;
+    border-radius: 75%;
+}
+#subscribe-btn {
+    margin-left: auto;
+    width: 4em;
+    height: 2em;
+    background: red;
+}
+/* make a comment */
+#comment-avi-personal {
+    width: 2em;
+    height: 2em;
+    background: red;
+    border-radius: 50%;
+}
+#add-comment-container {
+    margin: 1em 0;
+    display: flex;
+    gap: 1em;
+}
+#add-comment-container input {
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+/* comments list */
+#comments {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+/* comment object */
+.comment {
+    display: flex;
+    gap: 1em;
+}
+.comment-avi {
+    width: 2em;
+    height: 2em;
+    background: red;
+    border-radius: 50%;
+}
+.comment-stack {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.comment-header {
+    display: flex;
+    gap: .5em;
+}
+.comment-footer {
+    display: flex;
+    gap: 1em;
+}
+.thumbup, .thumbdown {
+    width: 1em;
+    height: 1em;
+    background: red;
+}
