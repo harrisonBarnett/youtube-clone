@@ -9,26 +9,25 @@
 </head>
 <body>
     <nav>
-        <div class='nav-item' id='hamburger'></div>
-        <div id="yt-btn"></div>
+        <img src='./ui-icons/menu-icon.svg' class='nav-item' id='hamburger'></img>
+        <div id="yt-btn">
+            <img src='./ui-icons/yt-icon.png' alt='youtube icon' />
+            <p>YouTube</p>
+        </div>
         <div id='search'>
             <input type="text" placeholder='Search'/>
-            <button id="search-btn">[hourlgass]</button>
-            <div class='nav-item' id="microphone"></div>
+            <button id="search-btn"><img src='./ui-icons/search-icon.svg' alt='search icon'/></button>
+            <img src='./ui-icons/mic-icon.svg' class='nav-item' id="microphone"></img>
         </div>
-        <div class='nav-item' id="create"></div>
-        <div class='nav-item' id="apps"></div>
-        <div class='nav-item' id="notifications"></div>
-        <div class='nav-item' id="avi"></div>
+        <img src='./ui-icons/create-icon.svg' class='nav-item' id="create"></img>
+        <img src='./ui-icons/apps-icon.svg' class='nav-item' id="apps"></img>
+        <img src='./ui-icons/bell-icon.svg' class='nav-item' id="notifications"></img>
+        <div src='' class='nav-item' id="avi"></div>
     </nav>
     <main>
         <div id="column-main">
             <div id="player">
-                <iframe 
-                src="https://www.youtube.com/embed/V74l_zS1x8E" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/V74l_zS1x8E?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <footer id="player-footer">
                 <div id="player-meta">
@@ -37,19 +36,20 @@
                         <p>64,935 views</p>
                         <p>Feb 28, 2014</p>
                         <div class='player-meta-stack' id="player-like">
-                            <img src="" alt="" class='player-meta-btn' id="player-like-btn" />
+                            <img src="./ui-icons/like-icon.svg" alt="like button" class='player-meta-btn' id="player-like-btn" />
                             <p>471</p>
                         </div>
                         <div class='player-meta-stack' id="player-dislike">
-                            <img src="" alt="" class='player-meta-btn' id="player-dislike-btn"/>
+                            <img src="./ui-icons/dislike-icon.svg" alt="dislike button" class='player-meta-btn' id="player-dislike-btn"/>
                             <p>DISLIKE</p>
                         </div>
                         <div class='player-meta-stack' id="player-share">
-                            <img src="" alt="" class='player-meta-btn' id="player-share-btn"/>
+                            <img src="./ui-icons/share-icon.svg" alt="share button" class='player-meta-btn' id="player-share-btn"/>
                             <p>SHARE</p>
                         </div>
                         <div class='player-meta-stack' id="player-save">
-                            <img src="" alt="" class='player-meta-btn' id="player-save-btn"/>
+                            <img src="./ui-icons/save-icon.svg" alt="save to playlist button" class='player-meta-btn' id="player-save-btn"/>
+                            <p>SAVE</p>
                         </div>
                         <div id="player-more">...</div>
                     </div>
@@ -71,7 +71,7 @@
                 <div id="comments-meta">
                     <p>18 comments</p>
                     <button id="comments-sort-group">
-                        <img src="" alt="" id="comments-sort-btn"/>
+                        <img src="./ui-icons/sort-icon.svg" alt="sort" id="comments-sort-btn"/>
                         SORT BY
                     </button>
                 </div>
@@ -81,22 +81,7 @@
                 </div>
                 <div id="comments">
                     <div class="comment">
-                        <div class="comment-avi"></div>
-                        <div class="comment-stack">
-                            <header class="comment-header">
-                                <p>Some Guy</p>
-                                <p>4 years ago</p>
-                            </header>
-                            <div class="comment-body">this is a comment</div>
-                            <footer class="comment-footer">
-                                <div class="thumbup"></div>
-                                <div class="thumbdown"></div>
-                                <button class="reply">REPLY</button>
-                            </footer>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <div class="comment-avi"></div>
+                        <div class="comment-avi avi-1"></div>
                         <div class="comment-stack">
                             <header class="comment-header">
                                 <p>Some Guy</p>
@@ -105,16 +90,16 @@
                             <div class="comment-body">this is a comment</div>
                             <footer class="comment-footer">
                                 <div class="thumbup-container">
-                                    <div class="thumbup"></div>
-                                    <p>20</p>
+                                    <img src='./ui-icons/like-icon.svg'class='thumbup'/>
+                                    <p>4</p>
                                 </div>
-                                <div class="thumbdown"></div>
+                                <img src='./ui-icons/dislike-icon.svg'class='thumbdown'/>
                                 <button class="reply">REPLY</button>
                             </footer>
                         </div>
                     </div>
                     <div class="comment">
-                        <div class="comment-avi"></div>
+                        <div class="comment-avi avi-2"></div>
                         <div class="comment-stack">
                             <header class="comment-header">
                                 <p>Some Guy</p>
@@ -122,12 +107,101 @@
                             </header>
                             <div class="comment-body">this is a comment</div>
                             <footer class="comment-footer">
-                                <div class="thumbup"></div>
-                                <div class="thumbdown"></div>
+                                <div class="thumbup-container">
+                                    <img src='./ui-icons/like-icon.svg'class='thumbup'/>
+                                    <p>20</p>
+                                </div>
+                                <img src='./ui-icons/dislike-icon.svg'class='thumbdown'/>
                                 <button class="reply">REPLY</button>
                             </footer>
                         </div>
                     </div>
+                    <div class="comment">
+                        <div class="comment-avi avi-3"></div>
+                        <div class="comment-stack">
+                            <header class="comment-header">
+                                <p>Some Guy</p>
+                                <p>4 years ago</p>
+                            </header>
+                            <div class="comment-body">this is a comment</div>
+                            <footer class="comment-footer">
+                                <div class="thumbup-container">
+                                    <img src='./ui-icons/like-icon.svg'class='thumbup'/>
+                                    <p>69</p>
+                                </div>                                <img src='./ui-icons/dislike-icon.svg'class='thumbdown'/>
+                                <button class="reply">REPLY</button>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-avi avi-1"></div>
+                        <div class="comment-stack">
+                            <header class="comment-header">
+                                <p>Some Guy</p>
+                                <p>4 years ago</p>
+                            </header>
+                            <div class="comment-body">this is a comment</div>
+                            <footer class="comment-footer">
+                                <div class="thumbup-container">
+                                    <img src='./ui-icons/like-icon.svg'class='thumbup'/>
+                                    <p>4</p>
+                                </div>                                <img src='./ui-icons/dislike-icon.svg'class='thumbdown'/>
+                                <button class="reply">REPLY</button>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-avi avi-2"></div>
+                        <div class="comment-stack">
+                            <header class="comment-header">
+                                <p>Some Guy</p>
+                                <p>4 years ago</p>
+                            </header>
+                            <div class="comment-body">this is a comment</div>
+                            <footer class="comment-footer">
+                                <div class="thumbup-container">
+                                    <img src='./ui-icons/like-icon.svg'class='thumbup'/>
+                                    <p>20</p>
+                                </div>                                <img src='./ui-icons/dislike-icon.svg'class='thumbdown'/>
+                                <button class="reply">REPLY</button>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-avi avi-3"></div>
+                        <div class="comment-stack">
+                            <header class="comment-header">
+                                <p>Some Guy</p>
+                                <p>4 years ago</p>
+                            </header>
+                            <div class="comment-body">this is a comment</div>
+                            <footer class="comment-footer">
+                                <div class="thumbup-container">
+                                    <img src='./ui-icons/like-icon.svg'class='thumbup'/>
+                                    <p>69</p>
+                                </div>                                <img src='./ui-icons/dislike-icon.svg'class='thumbdown'/>
+                                <button class="reply">REPLY</button>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-avi avi-1"></div>
+                        <div class="comment-stack">
+                            <header class="comment-header">
+                                <p>Some Guy</p>
+                                <p>4 years ago</p>
+                            </header>
+                            <div class="comment-body">this is a comment</div>
+                            <footer class="comment-footer">
+                                <div class="thumbup-container">
+                                    <img src='./ui-icons/like-icon.svg'class='thumbup'/>
+                                    <p>4</p>
+                                </div>                                <img src='./ui-icons/dislike-icon.svg'class='thumbdown'/>
+                                <button class="reply">REPLY</button>
+                            </footer>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -140,10 +214,10 @@
             </div>
             <div id="video-list">
                 <div class="list-video">
-                    <img src="" alt="" class="list-video-thumbnail">
+                    <img src="./thumbnails/thumb1.webp" alt="a gif of rudeboys rapping" class="list-video-thumbnail">
                     <div class="list-video-stack">
-                        <div class="list-video-title">video title</div>
-                        <div class="list-video-author">video author</div>
+                        <div class="list-video-title">The Bug - 'Pressure (feat. Flowdan)' (Official Video)</div>
+                        <div class="list-video-author">Ninja Tune</div>
                         <div class="list-video-meta">
                             <p>80k views</p>
                             <p>7 years ago</p>
@@ -151,10 +225,10 @@
                     </div>
                 </div>
                 <div class="list-video">
-                    <img src="" alt="" class="list-video-thumbnail">
+                    <img src="./thumbnails/thumb2.webp" alt="a gif of a person floating" class="list-video-thumbnail">
                     <div class="list-video-stack">
-                        <div class="list-video-title">video title</div>
-                        <div class="list-video-author">video author</div>
+                        <div class="list-video-title">Porter Robinson - Something Comforting (Official Music Video)</div>
+                        <div class="list-video-author">Porter Robinson</div>
                         <div class="list-video-meta">
                             <p>80k views</p>
                             <p>7 years ago</p>
@@ -162,16 +236,119 @@
                     </div>
                 </div>
                 <div class="list-video">
-                    <img src="" alt="" class="list-video-thumbnail">
+                    <img src="./thumbnails/thumb3.webp" alt="a gif of psychedelic paint swirls" class="list-video-thumbnail">
                     <div class="list-video-stack">
-                        <div class="list-video-title">video title</div>
-                        <div class="list-video-author">video author</div>
+                        <div class="list-video-title">Floating Points - 'Bias (Mayfield Depot Mix)' (Official Audio)</div>
+                        <div class="list-video-author">Floating Points</div>
                         <div class="list-video-meta">
                             <p>80k views</p>
                             <p>7 years ago</p>
                         </div>
                     </div>
                 </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb4.webp" alt="a gif of sophie singing" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">SOPHIE — It's Okay To Cry (Official Video)</div>
+                        <div class="list-video-author">SOPHIE</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb5.webp" alt="a gif of a puppet driving a car" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">Mr Oizo - Hand In The Fire (feat. Charli XCX) [Official Video]</div>
+                        <div class="list-video-author">Ed Banger Records</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb6.webp" alt="a gif of rubber johnny sitting and looking normal" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">Rubber Johnny by Chris Cunningham & Aphex Twin (1080p HD)</div>
+                        <div class="list-video-author">The Windowlicker</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb1.webp" alt="a gif of rudeboys rapping" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">The Bug - 'Pressure (feat. Flowdan)' (Official Video)</div>
+                        <div class="list-video-author">Ninja Tune</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb2.webp" alt="a gif of a person floating" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">Porter Robinson - Something Comforting (Official Music Video)</div>
+                        <div class="list-video-author">Porter Robinson</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb3.webp" alt="a gif of psychedelic paint swirls" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">Floating Points - 'Bias (Mayfield Depot Mix)' (Official Audio)</div>
+                        <div class="list-video-author">Floating Points</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb4.webp" alt="a gif of sophie singing" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">SOPHIE — It's Okay To Cry (Official Video)</div>
+                        <div class="list-video-author">SOPHIE</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb5.webp" alt="a gif of a puppet driving a car" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">Mr Oizo - Hand In The Fire (feat. Charli XCX) [Official Video]</div>
+                        <div class="list-video-author">Ed Banger Records</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="./thumbnails/thumb6.webp" alt="a gif of rubber johnny sitting and looking normal" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">Rubber Johnny by Chris Cunningham & Aphex Twin (1080p HD)</div>
+                        <div class="list-video-author">The Windowlicker</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+
             </div>
         </aside>
     </main>

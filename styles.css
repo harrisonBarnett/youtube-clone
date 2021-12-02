@@ -1,5 +1,9 @@
 :root {
-    --primary-color: #181818;
+    --primary-900: #181818;
+    --primary-700: #202020;
+    --primary-500: #303030;
+    --primary-300: rgb(170, 170, 170);
+    --primary-100: #ffffff;
 }
 * {
     padding: 0;
@@ -9,51 +13,85 @@
 }
 
 body, html {
-    /* temp */
-    /* background: var(--primary-color); */
-
-    background: white;
+    background: var(--primary-900);
 }
 body {
     width: 100vw;
     position: relative;
+    font-family: Arial, sans-serif;
+}
+hr {
+    color: rgba(170, 170, 170, .05);
 }
 nav {
-    border: 1px solid red;
-    padding: .5em;
+    padding: .5em 2em;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    z-index: 999;
     display: flex;
     align-items: center;
     gap: 1em;
+    background: var(--primary-700);
 }
 .nav-item {
-    height: 2em;
-    width: 2em;
-    background: red;
+    height: 1.5em;
+    width: 1.5em;
     border-radius: 50%;
+    cursor: pointer;
 }
 #yt-btn {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+}
+#yt-btn img {
     height: 2em;
-    width: 4em;
-    background: red;
 }
 #search {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 #search input {
+    padding:1em;
     width: 50%;
+    background: var(--primary-900);
+    outline: none;
+    border: 1px solid rgba(170, 170, 170, .15);
+}
+#search input::placeholder {
+    font-size: 1.2em;
+    color: var(--primary-300);
+}
+#search-btn {
+    height: 3.25em;
+    padding: 0 1.5em;
+    border: none;
+    background: var(--primary-500);
+    color: white;
+    cursor: pointer;
+}
+#microphone {
+    padding: .5em;
+    margin-left: .5em;
+    background: var(--primary-900);
+}
+#avi {
+    height: 2em;
+    width: 2em;
+    background-image: url('./thumbnails/avatar.webp');
+    background-size: cover;
+    background-position: center;
 }
 /* main layout styles */
 main {
-    margin: 5% auto;
+    margin: 8% auto;
     display: flex;
-    border: 1px solid pink;
     width: 90%;
     height: 100%;
 }
@@ -63,7 +101,6 @@ main {
 }
 aside {
     margin-left: 1em;
-    border: 1px solid pink;
     width: 35%;
     height: 100%;
 }
@@ -75,6 +112,7 @@ aside {
 /* player meta */
 #player-title {
     font-size: 1.2em;
+    color: white;
 }
 #player-meta {
     margin: 1em 0;
@@ -87,18 +125,28 @@ aside {
     align-items: center;
     gap: 1em;
 }
+#player-meta-items>p:nth-of-type(1),
+#player-meta-items>p:nth-of-type(2){
+    color: var(--primary-300);
+    font-size: .9em;
+}
 .player-meta-stack {
     display: flex;
+    align-items: center;
     gap: .5em;
+    color: white;
+
 }
 .player-meta-btn {
-    height: 1em;
-    width: 1em;
-    background: red;
+    height: 1.5em;
+    width: 1.5em;
     border-radius: 50%;
 }
 #player-like {
     margin-left: auto;
+}
+#player-more {
+    color: white;
 }
 /* player desc */
 #player-description {
@@ -112,21 +160,27 @@ aside {
 }
 #description-stack p:nth-child(1) {
     cursor: pointer;
+    color: white;
 }
 #description-stack p:nth-child(2) {
     font-size: .8em;
     margin: .25em 0 1em 0;
+    color: var(--primary-300);
 }
 #description-stack p:nth-child(3) {
     margin-bottom: .5em;
+    color: white;
 }
 #description-stack a {
     font-size: .8em;
+    color: var(--primary-300);
 }
 #player-avi {
     height: 3em;
     width: 3em;
-    background: red;
+    background-image: url('./thumbnails/odinavi.png');
+    background-size: cover;
+    background-position: center;
     border-radius: 75%;
     cursor: pointer;
 }
@@ -148,19 +202,20 @@ aside {
 }
 #comments-meta p {
     font-size: 1.2em;
+    color: white;
 }
 #comments-sort-group {
     display: flex;
     align-items: center;
-    gap: .5em;
+    gap: 1em;
     border: none;
     background: none;
     cursor: pointer;
+    color: white;
 }
 #comments-sort-btn {
     width: 2em;
     height: 2em;
-    background: red;
     border-radius: 50%;
 }
 #comments-sort-group p {
@@ -169,7 +224,9 @@ aside {
 #comment-avi-personal {
     width: 2em;
     height: 2em;
-    background: red;
+    background-image: url('./thumbnails/avatar.webp');
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
 }
 #add-comment-container {
@@ -182,7 +239,12 @@ aside {
     border-top: none;
     border-right: none;
     border-left: none;
+    border-bottom: 1px solid rgba(170, 170, 170, .15);
     outline: none;
+    background: none;
+}
+#add-comment-container input::placeholder {
+    color: var(--primary-300);
 }
 /* comments list */
 #comments {
@@ -204,6 +266,19 @@ aside {
     border-radius: 50%;
     cursor: pointer;
 }
+.avi-1, .avi-2, .avi-3 {
+    background-size: cover;
+    background-position: center;
+}
+.avi-1 {
+    background-image: url('./thumbnails/avi1.jpg');
+}
+.avi-2 {
+    background-image: url('./thumbnails/avi2.webp');
+}
+.avi-3 {
+    background-image: url('./thumbnails/avi3.jpg');
+}
 .comment-stack {
     display: flex;
     flex-direction: column;
@@ -217,18 +292,25 @@ aside {
 .comment-header p:nth-child(1) {
     font-size: .9em;
     cursor: pointer;
+    color: white;
 }
 .comment-header p:nth-child(2) {
     font-size: .8em;
+    color: var(--primary-300);
+}
+.comment-body {
+    color: white;
 }
 .comment-footer {
     display: flex;
     gap: 1em;
+    color: var(--primary-300);
 }
 .reply {
     border: none;
     background: none;
     cursor: pointer;
+    color: var(--primary-300);
 }
 .thumbup-container {
     display: flex;
@@ -241,7 +323,6 @@ aside {
 .thumbup, .thumbdown {
     width: 1em;
     height: 1em;
-    background: red;
     cursor: pointer;
 }
 /* sidebar styles */
@@ -253,6 +334,14 @@ aside {
     padding: .5em 1em;
     border: none;
     border-radius: 2em;
+    background: var(--primary-500);
+    color: white;
+    border: 1px solid rgba(170, 170, 170, .15);
+    cursor: pointer;
+}
+#all {
+    background: white;
+    color: black;
 }
 #video-list {
     margin-top: 1em;
@@ -271,13 +360,19 @@ aside {
     display: flex;
     flex-direction: column;
 }
+.list-video-title {
+    color: white;
+}
 .list-video-author {
     margin-top: auto;
     font-size: .9em;
+    color: var(--primary-300);
 }
 .list-video-meta {
     margin-top: .25em;
     margin-bottom: 1em;
     display: flex;
+    gap: .5em;
     font-size: .9em;
+    color: var(--primary-300);
 }
