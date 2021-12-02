@@ -63,11 +63,18 @@
                         <p>How do you contribute to open source?  In this video, I'll describe the easiest way to make a simple contribution to an open source project -- without using the command line, a text editor, "forking a repo", or even touching Git outside of Github.  I'll also describe what kinds of contributions open </p>
                         <a id='description-show-more' href="#">SHOW MORE</a>
                     </div>
-                    <div id="subscribe-btn"></div>
+                    <button id="subscribe-btn">SUBSCRIBE</button>
                 </div>
             </footer>
             <hr/>
             <div id="comments-container">
+                <div id="comments-meta">
+                    <p>18 comments</p>
+                    <button id="comments-sort-group">
+                        <img src="" alt="" id="comments-sort-btn"/>
+                        SORT BY
+                    </button>
+                </div>
                 <div id="add-comment-container">
                     <div id="comment-avi-personal"></div>
                     <input type="text" id="add-comment" placeholder='Add a public comment...' />
@@ -97,7 +104,10 @@
                             </header>
                             <div class="comment-body">this is a comment</div>
                             <footer class="comment-footer">
-                                <div class="thumbup"></div>
+                                <div class="thumbup-container">
+                                    <div class="thumbup"></div>
+                                    <p>20</p>
+                                </div>
                                 <div class="thumbdown"></div>
                                 <button class="reply">REPLY</button>
                             </footer>
@@ -123,12 +133,34 @@
         </div>
         <aside>
             <div id="sidebar-filter">
-                <button class='sidebar-filter-btn' id="all">all</button>
-                <button class='sidebar-filter-btn' id="git">git</button>
-                <button class='sidebar-filter-btn' id="related">related</button>
-                <button class='sidebar-filter-btn' id="watched">watched</button>
+                <button class='sidebar-filter-btn' id="all">All</button>
+                <button class='sidebar-filter-btn' id="git">Git</button>
+                <button class='sidebar-filter-btn' id="related">Related</button>
+                <button class='sidebar-filter-btn' id="watched">Watched</button>
             </div>
             <div id="video-list">
+                <div class="list-video">
+                    <img src="" alt="" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">video title</div>
+                        <div class="list-video-author">video author</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-video">
+                    <img src="" alt="" class="list-video-thumbnail">
+                    <div class="list-video-stack">
+                        <div class="list-video-title">video title</div>
+                        <div class="list-video-author">video author</div>
+                        <div class="list-video-meta">
+                            <p>80k views</p>
+                            <p>7 years ago</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="list-video">
                     <img src="" alt="" class="list-video-thumbnail">
                     <div class="list-video-stack">
