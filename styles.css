@@ -192,6 +192,8 @@ aside {
     padding: .5em 1em;
     border: none;
     background: red;
+    color: white;
+    border-radius: 2px;
 }
 /* make a comment */
 #comments-meta {
